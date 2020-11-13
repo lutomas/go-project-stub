@@ -44,3 +44,9 @@ go-mod-get:
 go-mod-vendor:
 	@echo "Prepare and clean dependencies"
 	go mod vendor && go mod tidy
+
+# ###########################
+# RUN
+# ###########################
+run-docker:
+	docker run --env-file=.env -p 9701:9701 main-app-server:latest

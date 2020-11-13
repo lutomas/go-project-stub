@@ -1,2 +1,4 @@
 # go-project-stub
-Stub for go project
+
+
+Please look at Makefile.

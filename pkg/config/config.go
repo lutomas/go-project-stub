@@ -21,7 +21,7 @@ type Logger struct {
 
 type MainAppServer struct {
 	EnableCors bool   `default:"false" envconfig:"MAIN_APP_ENABLE_CORS"`
-	HttpHost   string `default:"localhost" envconfig:"MAIN_APP_HTTP_HOST"`
+	HttpHost   string `default:"" envconfig:"MAIN_APP_HTTP_HOST"`
 	HttpPort   int    `default:"9701" envconfig:"MAIN_APP_SERVER_HTTP_PORT"`
 }
 
