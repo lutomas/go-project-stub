@@ -1,0 +1,37 @@
+# Mac OS X files
+.DS_Store
+
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
+.glide/
+
+# IDE files
+.idea
+
+# Binary files
+bin
+
+# LH = LoclaHost files used for local purposes.
+lh.*
+LH.*
+
+.vscode
+
+# .env file stores docker-compose environment variables such as 
+# database host, credentials
+.env*
+.test_env*
+
+# DB
+main-app.db

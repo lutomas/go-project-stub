@@ -1,0 +1,41 @@
+openapi: 3.0.2
+info:
+  title: Main-App API
+  description: Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.
+  version: 0.1.9
+servers:
+  - url: http://localhost:9701/api/v1
+    description: Optional server description, e.g. Main (production) server
+  - url: http://staging-api.example.com
+    description: Optional server description, e.g. Internal staging server for testing
+paths:
+  /version:
+    get:
+      summary: Returns version.
+      description: Some description.
+      responses:
+        '200':    # status code
+          description: Version of the application
+          content:
+            application/json:
+              AnyValue:
+                nullable: true
+                description: Can be any value, including `null`.
+        '400': # status code
+          description: Something wen wrong.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HttpErrorResponse"
+components:
+  schemas:
+    HttpErrorResponse:
+      type: "object"
+      description: "Structure representing error. Common interface to return error."
+      required:
+        - "msg"
+      properties:
+        msg:
+          type: "string"
+          description: "I18N Error message."
+          example: "not_found"
