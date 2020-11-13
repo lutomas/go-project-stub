@@ -25,7 +25,7 @@ install-cli:
 	@echo "++ Building MAIN-APP-CLI binary (<current-os>)"
 	go install -ldflags "$(LDFLAGS)" github.com/lutomas/go-project-stub/cmd/main-app-cli
 
-image-server: install-linux
+image-main-app:
 	docker build -t main-app-server:latest -f build/deploy/main-app-server.Dockerfile .
 
 generate-main-app-api-types:
